@@ -1,3 +1,193 @@
-body {
-    background-color: mediumblue;
+* {
+  box-sizing: border-box;
+}
+
+header {
+    background-color: darkblue;
+}
+
+/*main {
+  background-color: rgb(166, 166, 243);
+  font-family: Helvetica, sans-serif;
+}*/
+
+#name-header {
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    text-align: center;
+}
+
+nav > button {
+    font-size: large;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: darkblue;
+    border-color: magenta;
+    color: magenta;
+    border-radius: 20px;
+}
+
+nav > button:hover {
+    background-color: magenta;
+}
+
+nav > button > a {
+    color: magenta;
+}
+
+nav > button > a:hover {
+    color: darkblue;
+}
+
+main {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+#projects {
+    text-indent: 50px;
+}
+
+#bio-container {
+    border: medium solid black;
+    border-radius: 4px;
+    border-color: transparent black transparent transparent;
+}
+
+@media screen and (max-width: 1200px) {
+    #bio-container {
+        border-color: transparent;
+    }
+}
+
+.school {
+    border: 5px solid darkblue;
+    border-radius: 12px;
+    padding: 5px;
+    outline: 3px solid darkgreen;
+}
+    
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: darkblue;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.TLcontainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.TLcontainer::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid lightblue;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid black;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent black;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+.right::after {
+  left: -12px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  border: 4px solid darkblue;
+  box-shadow: 5px 5px 3px lightblue;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .TLcontainer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .TLcontainer::before {
+    left: 60px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+
+footer {
+    text-align: center;
+}
+
+aside {
+    padding-top: 2em;
+    font-size: smaller;
 }
